@@ -28,7 +28,7 @@ class Employe(Personne):
 
     def get_dateArret(self) -> str:
         return self.dateArret
-
+    
     def set_dateArret(self, dateArret: str) -> None:
         self.dateArret = dateArret
 

@@ -34,7 +34,7 @@ class Personne:
 
     def get_codePostal(self) -> str:
         return self.codePostal
-
+    
     def set_codePostal(self, codePostal: str) -> None:
         self.codePostal = codePostal
 
@@ -46,7 +46,7 @@ class Personne:
 
     def get_courriel(self) -> str:
         return self.courriel
-
+    
     def set_courriel(self, courriel: str) -> None:
         self.courriel = courriel
 

@@ -45,7 +45,7 @@ class ClientApp:
         self.entry_code_postal = ttk.Entry(self.master, textvariable=self.code_postal)
         self.entry_code_postal.grid(row=4, column=1)
 
-        self.label_telephone = ttk.Label(self.master, text="Téléphone :")
+        self.label_telephone = ttk.Label(self.master, text="Tï¿½lï¿½phone :")
         self.label_telephone.grid(row=5, column=0, sticky=tk.W)
 
         self.telephone = tk.StringVar()
@@ -59,7 +59,7 @@ class ClientApp:
         self.entry_courriel = ttk.Entry(self.master, textvariable=self.courriel)
         self.entry_courriel.grid(row=6, column=1)
 
-        self.label_numero_identification = ttk.Label(self.master, text="Numéro d'identification :")
+        self.label_numero_identification = ttk.Label(self.master, text="Numï¿½ro d'identification :")
         self.label_numero_identification.grid(row=7, column=0, sticky=tk.W)
 
         self.numero_identification = tk.IntVar()
@@ -76,20 +76,20 @@ class ClientApp:
         self.button_ajouter.grid(row=9, column=0)
 
     def ajouter_client(self):
-        # Créer une instance de la classe Client avec les valeurs entrées dans les champs
+        # Crï¿½er une instance de la classe Client avec les valeurs entrï¿½es dans les champs
         nouveau_client = Client(self.nom.get(), self.adresse.get(), self.ville.get(), self.province.get(), 
                                 self.code_postal.get(), self.telephone.get(), self.courriel.get(),
                                 self.numero_identification.get(), self.sexe.get())
     
-        # Ajouter le nouveau client à la liste de clients
+        # Ajouter le nouveau client ï¿½ la liste de clients
         clients = self.lire_clients()
         clients.append(nouveau_client)
     
-        # Écrire la liste de clients mise à jour dans le fichier XML
+        # ï¿½crire la liste de clients mise ï¿½ jour dans le fichier XML
         self.ecrire_clients(clients)
 
         # Afficher un message de confirmation
-        tk.messagebox.showinfo("Confirmation", "Le client a été ajouté avec succès.")
+        tk.messagebox.showinfo("Confirmation", "Le client a ï¿½tï¿½ ajoutï¿½ avec succï¿½s.")
 
     def lire_clients(self) -> List[Client]:
         tree = ET.parse('clients.xml')

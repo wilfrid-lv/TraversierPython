@@ -40,10 +40,10 @@ class Traversier:
 
     def set_dateMiseService(self, dateMiseService: datetime):
         self.dateMiseService = dateMiseService
-
+    
     def get_listeEmploye(self) -> List[Employe]:
         return self.listeEmploye
-
+    
     def set_listeEmploye(self, listeEmploye: List[Employe]):
         self.listeEmploye = listeEmploye
 
@@ -65,4 +65,7 @@ class Traversier:
     def __eq__(self, obj: object) -> bool:
         if isinstance(obj, Traversier):
             return self.nom == obj.nom and self.anneeFabrication == obj.anneeFabrication
-        return False
+            return False
+    
+    def GetHashCode(self) -> int:
+        return hash((self.nom, self.capaciteVehicule, self.capacitePersonne, self.anneFabrication, self.dateMiseService, tuple(self.listeEmploye)))

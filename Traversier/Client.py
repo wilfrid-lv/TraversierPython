@@ -24,7 +24,7 @@ class Client(Personne):
 
     def set_dateNaissance(self, dateNaissance: str) -> None:
         self.dateNaissance = dateNaissance
-    
+
     def __str__(self) -> str:
         return super().__str__() +  f", {self.get_sexe()}, {self.get_numeroIdentification()}, {self.get_dateNaissance()}"
 
